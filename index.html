@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>options ideas PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Options.ideas</h1>
+            <button class="clearLocalStorageButton"><i class="fas fa-trash"></i></button>
+            <button class="addButton"><i class="fas fa-plus"></i></button>
+        </header>
+    </div>
+    <div class="content">
+        <div class="addNewIdea hidden">
+            <input type="text" placeholder="Ticker" class="inputTicker">
+            <div class="checkboxes">
+                <input type="radio" id="long" value="long" name="direction"><label for="long">Long</label>
+                <input type="radio" id="short" value="short" name="direction"><label for="short">Short</label>
+            </div>        
+            <textarea placeholder="Poznámka/požadavky" class="poznamka"></textarea>
+            <button type="submit" class="addButtonInside">přidat</button>
+        </div>
+        <div class="ideas">
+           
+        </div> 
+    </div>
+</body>
+</html>

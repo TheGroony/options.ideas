@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.5s;
+    flex: 1 0 0;
+}
+
+header:hover {
+    background-color: rgba(6, 77, 135, 0.2);
+}
+
+.logo {
+    color: rgb(8, 96, 168);
+    margin: 1rem;
+    flex: 1 0 0;
+}
+
+.addButton {
+    font-size: 2rem;
+    margin: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    color: rgb(8, 96, 168);
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.addButton:hover {
+    color: rgb(9, 28, 87)
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-left: 7.5rem;
+}
+
+.addNewIdea {
+    background-color: rgb(8, 96, 168);
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45vh;
+    width: 40vh;
+    z-index: 1;
+}
+
+.ideas {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.idea {
+    background-color: royalblue;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 45vh;
+    width: 40vh;
+    color: white;
+    margin: 1rem;
+}
+
+.LONG {
+    background-color: green;
+}
+
+.SHORT {
+    background-color: red;
+}
+
+.ideaTickerName {
+    font-size: 5rem;
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+.ideaDirection {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ideaTextArea {
+    padding: 0.5rem;
+}
+
+.removeIdea {
+    font-size: 2rem;
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    flex: 1 1 0;
+    transition: all 0.2s;
+}
+
+.removeIdea:hover {
+    color: red;
+}
+
+.inputTicker {
+    font-size: 5rem;
+    width: 15rem;
+    margin: 1rem;
+}
+
+input[type=text] {
+    border: none;
+    outline:none;
+    background-color: rgb(8, 96, 168);
+    border-bottom: 5px solid rgba(6, 77, 135, 1);
+    text-align: center;
+    color: white;
+}
+
+.checkboxes {
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.poznamka {
+    height: 100px;
+    width: 200px;
+    font-size: 1rem;
+    color: white;
+    overflow: hidden;
+    resize: none;
+    background-color: rgb(8, 96, 168);
+    border: none;
+    border-bottom: 5px solid rgba(6, 77, 135, 1);
+    outline: none;
+    text-align: center;
+    margin: 1rem;
+}
+
+.addButtonInside {
+    color: white;
+    font-size: 1.5rem;
+    background-color: royalblue;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+
+
+.addButtonInside:hover {
+    opacity: 0.5;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.clearLocalStorageButton {
+    font-size: 2rem;
+    color: rgb(6, 77, 135);
+    border: none;
+    outline: none;
+    background: none;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+.clearLocalStorageButton:hover {
+    color: rgb(9, 28, 87);
+}
