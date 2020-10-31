@@ -2,11 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family:  Arial, Helvetica, sans-serif;
 }
+
+@media only screen and (max-width:414px) {
+    .container {
+        max-width: 414px;
+    }
+    .content {
+        margin-left: 2.5rem !important;
+    }
+    .ideaTickerName {
+        position: absolute;
+    }
+    .ideaDirection {
+        padding-top: 6rem;
+    }
+    .ideaTextArea {
+        max-height: 10rem;
+    }
+
+}
+
 
 header {
     height: 5rem;
@@ -18,14 +35,18 @@ header {
     flex: 1 0 0;
 }
 
-header:hover {
-    background-color: rgba(6, 77, 135, 0.2);
-}
 
 .logo {
     color: rgb(8, 96, 168);
     margin: 1rem;
     flex: 1 0 0;
+    transition: all 0.2s;
+}
+
+
+.logo:hover {
+    color: rgb(9, 28, 87);
+    cursor: default;
 }
 
 .addButton {
@@ -43,12 +64,6 @@ header:hover {
     color: rgb(9, 28, 87)
 }
 
-.content {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    padding-left: 7.5rem;
-}
 
 .addNewIdea {
     background-color: rgb(8, 96, 168);
@@ -59,14 +74,19 @@ header:hover {
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
-    height: 45vh;
+    height: 46vh;
     width: 40vh;
     z-index: 1;
+    border-radius: 1rem;
 }
 
 .ideas {
     display: flex;
     flex-flow: row wrap;
+}
+
+.content {
+    margin-left: 6rem;
 }
 
 .idea {
@@ -79,28 +99,45 @@ header:hover {
     width: 40vh;
     color: white;
     margin: 1rem;
+    border-radius: 1rem;
 }
 
 .LONG {
-    background-color: green;
+    background-color: rgb(26, 148, 49);
 }
 
 .SHORT {
-    background-color: red;
+    background-color: rgb(194, 32, 19);
 }
 
 .ideaTickerName {
     font-size: 5rem;
     margin: 1rem 1rem 0rem 1rem;
+    text-transform: uppercase;
+    z-index: 1;
 }
 
 .ideaDirection {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    opacity: 0.7;
+    position: relative;
+    top:-9%;
 }
 
 .ideaTextArea {
     padding: 0.5rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    position:relative;
+    height: 15rem;
+    top:-12%;
+    font-size: 1.5rem;
+    flex: 1 0 0;
+    overflow-y: scroll;
+}
+
+.ideaTextArea::-webkit-scrollbar {
+    display: none;
 }
 
 .removeIdea {
@@ -109,24 +146,39 @@ header:hover {
     border: none;
     outline: none;
     background: none;
-    flex: 1 1 0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 1rem;
     transition: all 0.2s;
 }
 
 .removeIdea:hover {
-    color: red;
+    color: rgb(196, 0, 0);
 }
 
 .inputTicker {
     font-size: 5rem;
     width: 15rem;
-    margin: 1rem;
+    margin: 1.5rem;
+    text-transform: uppercase;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+    text-transform: none;
+}
+
+label {
+    padding: 0.5rem;
 }
 
 input[type=text] {
     border: none;
     outline:none;
-    background-color: rgb(8, 96, 168);
+    background-color: rgb(8, 96, 160);
+    border-radius: 0.5rem;
     border-bottom: 5px solid rgba(6, 77, 135, 1);
     text-align: center;
     color: white;
@@ -148,12 +200,13 @@ input[type=text] {
     color: white;
     overflow: hidden;
     resize: none;
-    background-color: rgb(8, 96, 168);
+    background-color: rgb(8, 96, 160);
     border: none;
     border-bottom: 5px solid rgba(6, 77, 135, 1);
     outline: none;
-    text-align: center;
     margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .addButtonInside {

@@ -35,32 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
  addButton.addEventListener('click', newIdeaWindow);
  addButtonInside.addEventListener('click', function() {
-    if(inputTicker.value != "" && textArea.value != "") {
-        let long;
-        if(checkBoxLong.checked == true) {
-            long = true;
-        }
-        else long = false;
-    
-        const DIRECTION = long ? 'LONG' : 'SHORT';
-    
-        createNewIdea(inputTicker.value, id, DIRECTION, textArea.value,);
-        ideasStored.push(
-            {
-                ticker: inputTicker.value,
-                id: id,
-                direction: DIRECTION,
-                textArea: textArea.value,
-                trash: false
+    if(inputTicker.value != "" && textArea.value != "" ) {
+        if(checkBoxLong.checked == true || checkBoxShort.checked == true) {
+            let long;
+            if(checkBoxLong.checked == true) {
+                long = true;
             }
-        )
-        id++;
-        localStorage.setItem('ideasStored', JSON.stringify(ideasStored));
-        ideaWindowDiv.classList.toggle('hidden');
-        inputTicker.value = "";
-        checkBoxLong.checked = false;
-        checkBoxShort.checked = false;
-        textArea.value = "";
+            else long = false;
+        
+            const DIRECTION = long ? 'LONG' : 'SHORT';
+        
+            createNewIdea(inputTicker.value, id, DIRECTION, textArea.value,);
+            ideasStored.push(
+                {
+                    ticker: inputTicker.value,
+                    id: id,
+                    direction: DIRECTION,
+                    textArea: textArea.value,
+                    trash: false
+                }
+            )
+            id++;
+            localStorage.setItem('ideasStored', JSON.stringify(ideasStored));
+            ideaWindowDiv.classList.toggle('hidden');
+            inputTicker.value = "";
+            checkBoxLong.checked = false;
+            checkBoxShort.checked = false;
+            textArea.value = "";
+        }      
     }   
 });
 
