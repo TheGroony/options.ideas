@@ -6,8 +6,8 @@
 }
 
 @media only screen and (max-width:414px) {
-    .container {
-        max-width: 414px;
+    body {
+        max-width: 100% !important;
     }
     .content {
         margin-left: 2.5rem !important;
@@ -20,6 +20,12 @@
     }
     .ideaTextArea {
         max-height: 10rem;
+    }
+    .addNewIdea {
+        top: 22.5% !important;
+        left: 13.5% !important;
+        height: 58vh !important;
+        z-index: 2 !important;
     }
 
 }
@@ -58,6 +64,7 @@ header {
     color: rgb(8, 96, 168);
     cursor: pointer;
     transition: all 0.1s;
+    z-index: 2;
 }
 
 .addButton:hover {
@@ -76,7 +83,7 @@ header {
     align-items: center;
     height: 46vh;
     width: 40vh;
-    z-index: 1;
+    z-index: 2;
     border-radius: 1rem;
 }
 
@@ -110,6 +117,16 @@ header {
     background-color: rgb(194, 32, 19);
 }
 
+.blackBcg {
+    background-color: black;
+    position: absolute;
+    width:120rem;
+    height: 100rem;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+
 .ideaTickerName {
     font-size: 5rem;
     margin: 1rem 1rem 0rem 1rem;
@@ -137,6 +154,9 @@ header {
 }
 
 .ideaTextArea::-webkit-scrollbar {
+    display: none;
+}
+body::-webkit-scrollbar {
     display: none;
 }
 

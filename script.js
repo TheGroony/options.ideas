@@ -9,6 +9,7 @@ const ideaWindowDiv = document.querySelector('.addNewIdea');
 const ideasArea = document.querySelector('.ideas');
 const ideas = document.querySelector('.ideas');
 const clearLocalStorageButton = document.querySelector('.clearLocalStorageButton');
+const blackBcg = document.querySelector('.blackBcg');
 
 //variables, arrays
 let ideasStored;
@@ -81,8 +82,12 @@ ideas.addEventListener('click', removeIdea);
   function newIdeaWindow() {
       if(ideaWindowDiv.classList[1] === 'hidden') {
           ideaWindowDiv.classList.toggle('hidden');
+          blackBcg.classList.toggle('hidden');
       }
-      else ideaWindowDiv.classList.toggle('hidden');
+      else {
+        ideaWindowDiv.classList.toggle('hidden');
+        blackBcg.classList.toggle('hidden');
+      }
   }
 
   function createNewIdea(ticker, id, direction, poznamka) {
