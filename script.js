@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id++;
             localStorage.setItem('ideasStored', JSON.stringify(ideasStored));
             ideaWindowDiv.classList.toggle('hidden');
+            blackBcg.classList.toggle('hidden');
             inputTicker.value = "";
             checkBoxLong.checked = false;
             checkBoxShort.checked = false;
