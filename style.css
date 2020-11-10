@@ -7,7 +7,8 @@
 
 @media only screen and (max-width:414px) {
     body {
-        max-width: 100% !important;
+        max-width: 414px !important;
+        overflow-x: hidden;
     }
     .content {
         margin-left: 2.5rem !important;
@@ -42,18 +43,20 @@ header {
 }
 
 
+
 .logo {
     color: rgb(8, 96, 168);
     margin: 1rem;
     flex: 1 0 0;
     transition: all 0.2s;
+    cursor: default;
 }
-
 
 .logo:hover {
     color: rgb(9, 28, 87);
-    cursor: default;
 }
+
+
 
 .addButton {
     font-size: 2rem;
@@ -107,7 +110,9 @@ header {
     color: white;
     margin: 1rem;
     border-radius: 1rem;
+    cursor: default;
 }
+
 
 .LONG {
     background-color: rgb(26, 148, 49);
@@ -171,6 +176,7 @@ body::-webkit-scrollbar {
     padding: 0;
     bottom: 1rem;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .removeIdea:hover {
